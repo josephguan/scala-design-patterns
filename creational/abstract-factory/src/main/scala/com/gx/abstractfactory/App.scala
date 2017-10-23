@@ -20,10 +20,10 @@ package com.gx.abstractfactory
 // Refer to Cake Pattern
 object App extends App {
 
-  val audi = new Car(new AudiCarFactory())
+  val audi = new Car(AudiCarFactory)
   audi.drive()
 
-  val bmw = new Car(new BMWCarFactory())
+  val bmw = new Car(BMWCarFactory)
   bmw.drive()
 
 }
