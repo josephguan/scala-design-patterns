@@ -22,7 +22,7 @@ Use Chain of Responsibility when
 ## Example
 In this example, it demonstrates a software company handles customer's requests.
 
-The customer(App) is the Client. The SoftwareCommpany, as the interface who response to customers' requests, constructs
+The customer(App) is the Client. The SoftwareCommpany, as the interface who responses to customers' requests, constructs
 a chain of responsibility -- different roles handling different requests: developer can handle bugs, architect can handle
 features and CTO can handle products -- customers don't need to know whom should the request send to, they just send
 requests to the SoftwareCompany, in this way, it decouples the sender of a request from its receiver.

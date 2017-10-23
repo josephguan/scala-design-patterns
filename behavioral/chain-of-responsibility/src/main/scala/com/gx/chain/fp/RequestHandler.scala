@@ -17,30 +17,31 @@ package com.gx.chain.fp
   *
   */
 object RequestHandler {
+  // Handler Interface
   type Type = PartialFunction[Request, Response]
 
-  // concrete Handler
+  // Concrete Handler
   val developer: RequestHandler.Type = {
     case req@FixBugRequest(desc) =>
       println(s"I am a developer. I can fix this bug: $desc")
       Response(req, handled = true)
   }
 
-  // concrete Handler
+  // Concrete Handler
   val architect: RequestHandler.Type = {
     case req@FeatureRequest(desc) =>
       println(s"I am a architect. I can implement this feature: $desc")
       Response(req, handled = true)
   }
 
-  // concrete Handler
+  // Concrete Handler
   val CTO: RequestHandler.Type = {
     case req@ProductRequest(desc) =>
       println(s"I am a CTO. I can make this product: $desc")
       Response(req, handled = true)
   }
 
-  // concrete Handler
+  // Concrete Handler
   val noOne: RequestHandler.Type = {
     case req: Request =>
       println("No one is responsible for this request.")
