@@ -24,7 +24,7 @@ trait CarFactory {
   def createBrand(): Brand
 }
 
-class AudiCarFactory extends CarFactory {
+object AudiCarFactory extends CarFactory {
   override def createEngine(): Engine = new V6Engine()
 
   override def createWheel(): Wheel = new DunlopWheel()
@@ -32,7 +32,7 @@ class AudiCarFactory extends CarFactory {
   override def createBrand(): Brand = new AudiBrand
 }
 
-class BMWCarFactory extends CarFactory {
+object BMWCarFactory extends CarFactory {
   override def createEngine(): Engine = new V8Engine()
 
   override def createWheel(): Wheel = new MichelinWheel()
