@@ -32,7 +32,7 @@ Inspired by [Design patterns implemented in Java](https://github.com/iluwatar/ja
 |flyweight   | no                      | no       | yes        |
 |magnet      | yes(implicit conversion)| no       | no         |
 |proxy       | no                      | no       | yes        |
-|type-clases | yes(impilict parameter) | no       | no         |
+|type-classes| yes(impilict parameter) | no       | no         |
 
 
 ## Behavioral
