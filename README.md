@@ -9,7 +9,7 @@ The classical design patterns are the 23 design patterns by GoF.
 This project implements dozens of design patterns in Scala.
 The Scala language has several advanced features which make the implementations are different from other programming languages.
 
-Design patterns are categorized into [Creational](#Creational), [Structural](#Structural) and [Behavioral](#Structural) categories.
+Design patterns are categorized into [Creational](#user-content-creational), [Structural](#user-content-structural) and [Behavioral](#user-content-behavioral) categories.
 For each design pattern, it tags:
 1. **scala features** indicates if the implementation uses scala language-specific features.
 2. **functional** indicates if the design pattern can be implemented in functional-programming style.
