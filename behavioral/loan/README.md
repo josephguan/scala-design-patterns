@@ -1,4 +1,4 @@
-## Also known as
+# Loan Pattern
 
 
 ## Intent

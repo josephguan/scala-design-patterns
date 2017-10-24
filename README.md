@@ -22,30 +22,30 @@ Inspired by [Design patterns implemented in Java](https://github.com/iluwatar/ja
 
 ## Structural
 
-|    Name    |      scala features     |functional|Gang of four|
-|------------|-------------------------|----------|------------|
-|adapter     | yes(implicit class)     | no       | yes        |
-|bridge      | no                      | no       | yes        |
-|composite   | no                      | no       | yes        |
-|decorator   | yes(stackable trait)    | no       | yes        |
-|facade      | no                      | no       | yes        |
-|flyweight   | no                      | no       | yes        |
-|magnet      | yes(implicit conversion)| no       | no         |
-|proxy       | no                      | no       | yes        |
-|type-classes| yes(impilict parameter) | no       | no         |
+|    Name    |      scala features     |functional|Gang of four| link
+|------------|-------------------------|----------|------------|-------
+|adapter     | yes(implicit class)     | no       | yes        |[go](./structural/adapter/)
+|bridge      | no                      | no       | yes        |[go](./structural/bridge/)
+|composite   | no                      | no       | yes        |[go](./structural/composite/)
+|decorator   | yes(stackable trait)    | no       | yes        |[go](./structural/decorator/)
+|facade      | no                      | no       | yes        |[go](./structural/facade/)
+|flyweight   | no                      | no       | yes        |[go](./structural/flyweight/)
+|magnet      | yes(implicit conversion)| no       | no         |[go](./structural/magnet/)
+|proxy       | no                      | no       | yes        |[go](./structural/proxy/)
+|type classes| yes(impilict parameter) | no       | no         |[go](./structural/type-classes/)
 
 
 ## Behavioral
 
-|    Name         |       scala features    |functional|Gang of four|
-|-----------------|-------------------------|----------|------------|
-|chain of responsibility| no                | yes      | yes        |
-|command          | no                      | yes      | yes        |
-|loan             | yes(structural type,functional)|yes| no         |
-|mediator         | no                      | no       | yes        |
-|memento          | no                      | no       | yes        |
-|observer         | no                      | no       | yes        |
-|state            | no                      | no       | yes        |
-|strategy         | no                      | yes      | yes        |
-|template method  | no                      | no       | yes        |
-|visitor          | no                      | yes      | yes        |
+|    Name         |       scala features    |functional|Gang of four| link
+|-----------------|-------------------------|----------|------------|-------
+|chain of responsibility| no                | yes      | yes        |[go](./behavioral/chain-of-responsibility/)
+|command          | no                      | yes      | yes        |[go](./behavioral/command/)
+|loan             | yes(structural type,functional)|yes| no         |[go](./behavioral/loan/)
+|mediator         | no                      | no       | yes        |[go](./behavioral/mediator/)
+|memento          | no                      | no       | yes        |[go](./behavioral/memento/)
+|observer         | no                      | no       | yes        |[go](./behavioral/observer/)
+|state            | no                      | no       | yes        |[go](./behavioral/state/)
+|strategy         | no                      | yes      | yes        |[go](./behavioral/strategy/)
+|template method  | no                      | no       | yes        |[go](./behavioral/template-method/)
+|visitor          | no                      | yes      | yes        |[go](./behavioral/visitor/)

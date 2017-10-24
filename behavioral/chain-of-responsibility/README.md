@@ -1,3 +1,5 @@
+# Chain Of Responsibility Pattern
+
 ## Intent
 The chain of responsibility pattern decouples the sender of a request from its receiver,
 by giving more than one object an opportunity to handle the request.
