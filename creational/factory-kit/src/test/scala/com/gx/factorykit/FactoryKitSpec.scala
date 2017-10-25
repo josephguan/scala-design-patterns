@@ -1,5 +1,7 @@
 package com.gx.factorykit
 
+import org.scalatest.{FlatSpec, Matchers}
+
 /**
   * Copyright 2017 josephguan
   *
@@ -16,14 +18,18 @@ package com.gx.factorykit
   * limitations under the License.
   *
   */
-object App extends App {
+class FactoryKitSpec extends FlatSpec with Matchers {
 
-  val factory = WeaponFactoryKit.factory { builder =>
-    builder.put("axe", () => new Axe())
-    builder.put("bow", () => new Bow())
-    builder.put("sword", () => new Sword())
+  it should "create objects using local factory kit" in {
+    val factory = WeaponFactoryKit.factory { builder =>
+      builder.put("axe1", () => new Axe())
+      builder.put("axe2", () => new Axe())
+      builder.put("sword", () => new Sword())
+    }
+
+    val axe1 = factory.create("axe1")
+    val axe2 = factory.create("axe2")
+
+    axe1.toString should be(axe2.toString)
   }
-
-  val axe = factory.create("axe")
-  println(axe)
 }
