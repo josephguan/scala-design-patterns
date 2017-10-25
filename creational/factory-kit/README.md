@@ -42,4 +42,4 @@ Participants in this example:
 
 
 ## Reference
-1. [Java design patterns](https://github.com/iluwatar/java-design-patterns/tree/master/factory-kit)
+* [Java design patterns](https://github.com/iluwatar/java-design-patterns/tree/master/factory-kit)
