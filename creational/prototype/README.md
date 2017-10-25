@@ -19,6 +19,7 @@ each time with the appropriate state.
 ## Structure
 ![prototype](./etc/prototype.png)
 
+
 ## Participants
 * **Prototype**
     - declares an interface for cloning itself.
@@ -26,6 +27,7 @@ each time with the appropriate state.
     - implements an operation for cloning itself.
 * **Client**
     - creates a new object by asking a prototype to clone itself.
+
 
 ## Example
 In this example, it demonstrates Virus and Bacteria clone themselves.
