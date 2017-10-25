@@ -1,4 +1,4 @@
-package com.gx.prototype
+package com.gx.valueobject
 
 import org.scalatest.{FlatSpec, Matchers}
 
@@ -18,15 +18,9 @@ import org.scalatest.{FlatSpec, Matchers}
   * limitations under the License.
   *
   */
-class PrototypeSpec extends FlatSpec with Matchers {
+class ValueObjectSpec extends FlatSpec with Matchers {
 
-  it should "clone itself" in {
-    val virus = new Virus("HIV", "BAD")
-    virus.name should be(virus.clone().name)
-
-    val bacteria = Bacteria("LAB", "GOOD")
-    bacteria should be(bacteria.copy())
+  it should "be equal for two value objects with same value" in {
+    Point(1, 2) should be(Point(1, 2))
   }
-
-
 }
