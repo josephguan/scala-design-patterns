@@ -40,6 +40,9 @@ Participants in this example:
 * App is the **Client**.
 
 
+## Scala Tips
+* use Map structure and lambda function to create define the custom builder.
+
 
 ## Reference
 * [Java design patterns](https://github.com/iluwatar/java-design-patterns/tree/master/factory-kit)

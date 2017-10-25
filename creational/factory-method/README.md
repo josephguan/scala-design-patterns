@@ -35,5 +35,9 @@ Participants in this example:
 * ItalianChef/ThaiChef is the **ConcreteCreator**.
 
 
+## Scala Tips
+None
+
+
 ## Reference
 * Design Patterns: Elements of Reusable Object-Oriented Software
