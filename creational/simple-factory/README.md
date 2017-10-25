@@ -12,7 +12,7 @@ Use the Simple Factory pattern when
 
 
 ## Structure
-![simple-factory](./etc/simple-factory.jpg)
+![simple-factory](./etc/simple-factory.png)
 
 
 ## Participants
