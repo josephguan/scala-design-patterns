@@ -24,7 +24,7 @@ Use the Cake pattern when
 * **ConcreteProduct**
     - implements the AbstractProduct interface.
 * **Component**
-    - declares a product field for a type of AbstractProduct.
+    - maintains a reference to an object of type AbstractProduct.
 * **ComponentRegistry**
     - combines all related components into one trait for the client.
 * **Client**
