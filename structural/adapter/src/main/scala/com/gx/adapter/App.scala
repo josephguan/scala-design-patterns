@@ -22,6 +22,6 @@ package com.gx.adapter
   */
 object App extends App {
   val soldier = new Soldier()
-  soldier.fightWith(new AK47())
-  soldier.fightWith(new Knife())
+  println(soldier.fightWith(new AK47()))
+  println(soldier.fightWith(new Knife()))
 }

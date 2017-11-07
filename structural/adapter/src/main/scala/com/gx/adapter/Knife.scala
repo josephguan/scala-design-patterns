@@ -17,8 +17,8 @@ package com.gx.adapter
   *
   */
 class Knife {
-  def stab(): Unit = {
-    println("stab with knife")
+  def stab(): String = {
+    "stab with knife"
   }
 
 }

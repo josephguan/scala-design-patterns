@@ -1,4 +1,6 @@
-package com.gx
+package com.gx.adapter
+
+import org.scalatest.{FlatSpec, Matchers}
 
 /**
   * Copyright 2017 josephguan
@@ -16,11 +18,11 @@ package com.gx
   * limitations under the License.
   *
   */
-package object adapter {
+class AdapterSepc extends FlatSpec with Matchers {
 
-  // Adapter
-  implicit class Knife2WeaponAdapter(knife: Knife) extends Weapon {
-    override def fire(): String = knife.stab()
+  it should "adapt Knife to Weapon" in {
+    val soldier = new Soldier()
+    soldier.fightWith(new AK47) should be ("fire with AK47")
+    soldier.fightWith(new Knife) should be ("stab with knife")
   }
-
 }

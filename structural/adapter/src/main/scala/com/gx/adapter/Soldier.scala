@@ -17,7 +17,7 @@ package com.gx.adapter
   *
   */
 class Soldier {
-  def fightWith(gun: Gun): Unit = {
-    gun.fire()
+  def fightWith(weapon: Weapon): String = {
+    weapon.fire()
   }
 }

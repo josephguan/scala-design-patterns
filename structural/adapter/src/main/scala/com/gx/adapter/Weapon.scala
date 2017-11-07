@@ -16,12 +16,12 @@ package com.gx.adapter
   * limitations under the License.
   *
   */
-trait Gun {
-  def fire(): Unit
+trait Weapon {
+  def fire(): String
 }
 
-class AK47 extends Gun {
-  override def fire(): Unit = {
-    println("fire with AK47")
+class AK47 extends Weapon {
+  override def fire(): String = {
+    "fire with AK47"
   }
 }
