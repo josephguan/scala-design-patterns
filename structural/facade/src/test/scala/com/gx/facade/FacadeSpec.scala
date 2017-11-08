@@ -1,5 +1,9 @@
 package com.gx.facade
 
+import java.io.ByteArrayOutputStream
+
+import org.scalatest.{FlatSpec, Matchers}
+
 /**
   * Copyright 2017 josephguan
   *
@@ -16,14 +20,14 @@ package com.gx.facade
   * limitations under the License.
   *
   */
-class ComputerFacade {
-  private val cpu = new CPU
-  private val fan = new Fan
-  private val light = new Light
+class FacadeSpec extends FlatSpec with Matchers {
 
-  def powerOn():Unit = {
-    cpu.powerOn()
-    fan.run()
-    light.flash()
+  it should "simplify the power-on operation on computer system" in {
+    val buffer = new ByteArrayOutputStream()
+    Console.withOut(buffer) {
+      val computer = new ComputerFacade()
+      computer.powerOn()
+    }
+    buffer.toString() should be("CPU is powered on.\r\nFan is running.\r\nLight is flashing.\r\n")
   }
 }

@@ -17,11 +17,11 @@ package com.gx.facade
   *
   */
 class CPU {
-  def powerOn(): Unit = println("CPU power on.")
+  def powerOn(): Unit = println("CPU is powered on.")
 }
 
 class Fan {
-  def powerOn(): Unit = println("Fan power on.")
+  def run(): Unit = println("Fan is running.")
 }
 
 class Light {
