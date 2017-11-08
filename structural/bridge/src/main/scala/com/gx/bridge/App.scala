@@ -24,4 +24,7 @@ object App extends App {
   val help = new HelpPage(new LightTheme)
   println(help.getContent)
 
+  help.changeTheme(new DarkTheme)
+  println(help.getContent)
+
 }

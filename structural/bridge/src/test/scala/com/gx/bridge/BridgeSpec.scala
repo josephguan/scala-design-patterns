@@ -21,7 +21,14 @@ import org.scalatest.{FlatSpec, Matchers}
 class BridgeSpec extends FlatSpec with Matchers {
 
   it should "creates about-page with different theme" in {
-    new AboutPage(new DarkTheme).getContent should be ("About page in Dark Black")
-    new AboutPage(new LightTheme).getContent should be ("About page in Off White")
+    new AboutPage(new DarkTheme).getContent should be("About page in Dark Black")
+    new AboutPage(new LightTheme).getContent should be("About page in Off White")
+  }
+
+  it should "change help-page's theme" in {
+    val help = new HelpPage(new DarkTheme)
+    help.getContent should be("Help page in Dark Black")
+    help.changeTheme(new LightTheme)
+    help.getContent should be("Help page in Off White")
   }
 }

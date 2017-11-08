@@ -20,4 +20,5 @@ object App extends App {
 
   val action = new CompositeAction(new Forward, new TurnLeft, new TurnRight)
   action.act()
+
 }

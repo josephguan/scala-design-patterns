@@ -16,8 +16,12 @@ package com.gx.bridge
   * limitations under the License.
   *
   */
-abstract class WebPage(protected val theme: Theme) {
+abstract class WebPage(protected var theme: Theme) {
   def getContent: String
+
+  def changeTheme(newTheme: Theme): Unit = {
+    theme = newTheme
+  }
 }
 
 class AboutPage(aboutTheme: Theme) extends WebPage(aboutTheme) {

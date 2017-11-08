@@ -40,5 +40,23 @@ Participants in this example:
 * DarkTheme/LightTheme is the **ConcreteImplementor**.
 
 
+## Scala Tips
+* You can also implement bridge pattern by using *implicit parameter* in scala, for example:
+    ```scala
+    abstract class WebPage {
+      def getContent(implicit theme: Theme): String
+    }
+
+    class AboutPage extends WebPage {
+      override def getContent(implicit theme: Theme): String = "About page in " + theme.getColor
+    }
+
+    // in client
+    implicit var theme = new DarkTheme
+    new AboutPage().getContent
+
+    ```
+
+
 ## Reference
 * Design Patterns: Elements of Reusable Object-Oriented Software
