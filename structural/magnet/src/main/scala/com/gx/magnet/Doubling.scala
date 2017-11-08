@@ -33,28 +33,30 @@ trait DoubleMagnet {
 
 // Implicit Conversions
 object DoubleMagnet {
-  implicit def fromInt(x: Int): DoubleMagnet = new DoubleMagnet {
+
+  implicit class fromInt(x: Int) extends DoubleMagnet {
     override type Result = Int
 
     override def apply(): Result = x * 2
   }
 
-  implicit def fromListInt(ls: List[Int]): DoubleMagnet = new DoubleMagnet {
+  implicit class fromListInt(ls: List[Int]) extends DoubleMagnet {
     override type Result = List[Int]
 
     override def apply(): Result = ls.map(_ * 2)
   }
 
-  implicit def fromListString(ls: List[String]): DoubleMagnet = new DoubleMagnet {
+  implicit class fromListString(ls: List[String]) extends DoubleMagnet {
     override type Result = List[String]
 
     override def apply(): Result = ls ++ ls
   }
 
   // overloading with different number of parameters
-  implicit def fromStringIntTuple(para: Tuple2[String, Int]): DoubleMagnet = new DoubleMagnet {
+  implicit class fromStringIntTuple(para: Tuple2[String, Int]) extends DoubleMagnet {
     override type Result = String
 
     override def apply(): String = para._1 * para._2
   }
+
 }
