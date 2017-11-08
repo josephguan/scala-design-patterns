@@ -29,13 +29,20 @@ trait Tea {
 }
 
 // concrete flyweight
-class BlackTea extends Tea {
-  override val name: String = "Black Tea"
-}
-
-// concrete flyweight
 class GreenTea extends Tea {
   override val name: String = "Green Tea"
+}
+
+// unshared concrete flyweight
+class UnsharedTea extends Tea {
+  override val name: String = "Unshared Tea"
+
+  // unshared state
+  val price = 10
+
+  override def serve(table: Int): Unit = {
+    println(s"Serving $name to table# $table. Price is $price. hashCode: $hashCode")
+  }
 }
 
 // Tea type
@@ -43,9 +50,9 @@ object Tea {
 
   trait Type
 
-  case object BlackTea extends Type
-
   case object GreenTea extends Type
+
+  case object UnsharedTea extends Type
 
 }
 

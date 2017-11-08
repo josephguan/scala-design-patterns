@@ -28,12 +28,19 @@ class TeaMaker {
       teaPool.get(teaType).get
     }
     else {
-      val tea = teaType match {
-        case Tea.BlackTea => new BlackTea()
-        case Tea.GreenTea => new GreenTea()
+      teaType match {
+        case Tea.GreenTea =>
+          val tea = new GreenTea
+          teaPool.put(teaType, tea)
+          tea
+        case Tea.UnsharedTea =>
+          new UnsharedTea()
       }
-      teaPool.put(teaType, tea)
-      tea
     }
+  }
+
+  def makeTeaInPool(teaType: Tea.Type, tea: Tea): Tea = {
+    teaPool.put(teaType, tea)
+    tea
   }
 }

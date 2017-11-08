@@ -1,5 +1,7 @@
 package com.gx.flyweight
 
+import org.scalatest.{FlatSpec, Matchers}
+
 /**
   * Copyright 2017 josephguan
   *
@@ -16,13 +18,20 @@ package com.gx.flyweight
   * limitations under the License.
   *
   */
-object App extends App {
-  val teaShop = new TeaShop()
+class FlyweightSpec extends FlatSpec with Matchers {
 
-  teaShop.takeOrder(1, Tea.GreenTea)
-  teaShop.takeOrder(2, Tea.GreenTea)
-  teaShop.takeOrder(3, Tea.UnsharedTea)
-  teaShop.takeOrder(4, Tea.UnsharedTea)
+  it should "return same tea object" in {
+    val maker = new TeaMaker()
+    val tea1 = maker.make(Tea.GreenTea)
+    val tea2 = maker.make(Tea.GreenTea)
+    tea1 should be(tea2)
+  }
 
-  teaShop.serve()
+  it should "return different tea object for unshared flyweight object" in {
+    val maker = new TeaMaker()
+    val tea1 = maker.make(Tea.UnsharedTea)
+    val tea2 = maker.make(Tea.UnsharedTea)
+    tea1 should not be tea2
+  }
+
 }

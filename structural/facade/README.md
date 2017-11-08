@@ -52,5 +52,6 @@ Participants in this example:
 ## Scala Tips
 None
 
+
 ## Reference
 * Design Patterns: Elements of Reusable Object-Oriented Software

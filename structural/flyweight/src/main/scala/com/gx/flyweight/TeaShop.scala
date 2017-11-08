@@ -22,7 +22,7 @@ class TeaShop {
   private val orders = mutable.LinkedHashMap[Int, Tea]()
   private val maker = new TeaMaker()
 
-  def takeOrder(teaType: Tea.Type, table: Int): Unit = {
+  def takeOrder(table: Int, teaType: Tea.Type): Unit = {
     orders.put(table, maker.make(teaType))
   }
 
