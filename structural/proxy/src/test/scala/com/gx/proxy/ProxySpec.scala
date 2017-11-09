@@ -1,5 +1,7 @@
 package com.gx.proxy
 
+import org.scalatest.{FlatSpec, Matchers}
+
 /**
   * Copyright 2017 josephguan
   *
@@ -16,10 +18,18 @@ package com.gx.proxy
   * limitations under the License.
   *
   */
-object App extends App {
-  val computer = new LinuxComputer()
-  val ssh = new SecurityShell(computer)
-  println(ssh.run("shutdown"))
-  println(ssh.run("cd /root"))
+class ProxySpec extends FlatSpec with Matchers {
+
+  it should "run command as at local" in {
+    val computer = new LinuxComputer()
+    val ssh = new SecurityShell(computer)
+    ssh.run("pwd") should be("running 'pwd' in linux")
+  }
+
+  it should "prevent calling shutdown command in security shell" in {
+    val computer = new LinuxComputer()
+    val ssh = new SecurityShell(computer)
+    ssh.run("shutdown") should be("shutdown is prohibited")
+  }
 
 }

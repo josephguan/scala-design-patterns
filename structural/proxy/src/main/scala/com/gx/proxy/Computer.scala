@@ -17,19 +17,19 @@ package com.gx.proxy
   *
   */
 trait Computer {
-  def run(command: String): Unit
+  def run(command: String): String
 }
 
 // Real Subject
 class LinuxComputer extends Computer {
-  override def run(command: String): Unit = println(s"running '$command' in linux")
+  override def run(command: String): String = s"running '$command' in linux"
 }
 
 // Proxy Subject
 class SecurityShell(realComputer: Computer) extends Computer {
-  override def run(command: String): Unit = {
+  override def run(command: String): String = {
     if (command == "shutdown") {
-      println("shutdown is prohibited")
+      "shutdown is prohibited"
     } else {
       realComputer.run(command)
     }
