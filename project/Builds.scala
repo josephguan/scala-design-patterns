@@ -156,6 +156,17 @@ object Builds extends Build {
     settings(libraryDependencies ++= Dependencies.testDependencies)
   modules += `type-classes`
 
+
+  //----------------------------
+  // other patterns
+  //----------------------------
+  lazy val `selfless-trait` = project.in(file("other/selfless-trait")).settings(name := "selfless-trait").
+    settings(Common.settings: _*).
+    settings(libraryDependencies ++= Dependencies.testDependencies)
+  modules += `selfless-trait`
+
+
+
   //----------------------------------------
   // all in one
   //----------------------------------------
