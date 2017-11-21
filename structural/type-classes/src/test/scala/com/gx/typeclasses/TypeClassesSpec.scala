@@ -1,5 +1,7 @@
 package com.gx.typeclasses
 
+import org.scalatest.{FlatSpec, Matchers}
+
 /**
   * Copyright 2017 josephguan
   *
@@ -16,12 +18,17 @@ package com.gx.typeclasses
   * limitations under the License.
   *
   */
-object App extends App {
-  val human = new Human()
-  val monkey = new Monkey()
-  val lion = new Lion()
-  println(human.sayHelloTo(monkey))
-  println(human.sayHelloTo(lion))
-  val x = List(1,2,3)
+class TypeClassesSpec extends FlatSpec with Matchers {
+
+  it should "" in {
+    val human = new Human()
+
+    implicit val SpeakableInt = new Speakable[Int] {
+      override def say(): String = "I'm a Number."
+    }
+
+    human.sayHelloTo(2) should be("Human say hello, get reply: I'm a Number.")
+
+  }
 
 }

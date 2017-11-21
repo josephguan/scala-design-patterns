@@ -19,8 +19,13 @@ package com.gx.typeclasses
 
 class Human {
   def sayHelloTo[A](target: A)(implicit s: Speakable[A]): String = {
-    s.say()
+    s"Human say hello, get reply: ${s.say()}"
   }
+
+  // implementation using context-bounds
+  //  def sayHelloTo[A: Speakable[A]](target: A): String = {
+  //    s"Human say hello, get reply ${implicitly[Speakable[A]].say()}"
+  //  }
 }
 
 

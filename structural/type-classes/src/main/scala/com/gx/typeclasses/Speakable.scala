@@ -22,21 +22,3 @@ trait Speakable[T] {
   def say(): String
 }
 
-
-object Speakable {
-
-  implicit object SpeakableMonkey extends Speakable[Monkey] {
-    override def say(): String = "Ooh oo aa aa!"
-  }
-
-  implicit object SpeakableLion extends Speakable[Lion] {
-    override def say(): String = "Roaaar!"
-  }
-
-  implicit object SpeakableHuman extends Speakable[Human] {
-    override def say(): String = "Hello!"
-  }
-
-}
-
-
