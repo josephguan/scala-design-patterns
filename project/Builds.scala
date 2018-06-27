@@ -165,7 +165,10 @@ object Builds extends Build {
     settings(libraryDependencies ++= Dependencies.testDependencies)
   modules += `selfless-trait`
 
-
+  lazy val `monad` = project.in(file("other/monad")).settings(name := "monad").
+    settings(Common.settings: _*).
+    settings(libraryDependencies ++= Dependencies.testDependencies)
+  modules += `monad`
 
   //----------------------------------------
   // all in one

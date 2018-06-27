@@ -72,6 +72,7 @@ For each design pattern, it tags:
 |    Name                                            |      scala features         |functional|Gang of four|
 |----------------------------------------------------|-----------------------------|----------|------------|
 |[selfless trait](./other/selfless-trait/)           | **yes**(companion trait)    | no       | no         |
+|[monad](./other/monad/)                             | no                          | **yes**  | no         |
 
 
 
