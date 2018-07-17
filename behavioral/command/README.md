@@ -22,7 +22,7 @@ Use the Command pattern when you want to
 
 
 ## Structure
-![alt text](./etc/command.png)
+![command](./etc/command.png)
 
 
 ## Participants

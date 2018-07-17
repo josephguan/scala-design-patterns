@@ -17,16 +17,15 @@ package com.gx.mediator
   *
   */
 
-class Country(val name: String) {
-  var unitedNations: UnitedNations = _
+abstract class Country(val name: String) {
+  protected var organization: Organization = _
 
-  def joinedUnited(united: UnitedNations): Unit = {
-    unitedNations = united
-    unitedNations.addMember(this)
+  def join(org: Organization): Unit = {
+    organization = org
   }
 
   def declare(msg: String): Unit = {
-    unitedNations.declare(this, msg)
+    organization.countryDeclare(this, msg)
   }
 
   def receive(msg: String): Unit = {

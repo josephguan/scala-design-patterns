@@ -18,16 +18,15 @@ package com.gx.mediator
   */
 object App extends App {
 
-  val united = new UnitedNations
   val china = new China
   val usa = new USA
   val canada = new Canada
 
-  china.joinedUnited(united)
-  usa.joinedUnited(united)
-  canada.joinedUnited(united)
+  val united = new UnitedNations
+  united.addMember(china)
+  united.addMember(usa)
+  united.addMember(canada)
 
   usa.declare("Hello World")
-
 
 }
