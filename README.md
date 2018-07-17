@@ -53,18 +53,18 @@ For each design pattern, it tags:
 
 ### Behavioral
 
-|    Name                                                         |      scala features     |functional|Gang of four|
-|-----------------------------------------------------------------|-------------------------|----------|------------|
-|[chain of responsibility](./behavioral/chain-of-responsibility/) | no                      | **yes**  | **yes**    |
-|[command](./behavioral/command/)                                 | no                      | **yes**  | **yes**    |
-|[loan](./behavioral/loan/)                                       | **yes**(structural type)| **yes**  | no         |
-|[mediator](./behavioral/mediator/)                               | no                      | no       | **yes**    |
-|[memento](./behavioral/memento/)                                 | no                      | no       | **yes**    |
-|[observer](./behavioral/observer/)                               | no                      | no       | **yes**    |
-|[state](./behavioral/state/)                                     | no                      | no       | **yes**    |
-|[strategy](./behavioral/strategy/)                               | no                      | **yes**  | **yes**    |
-|[template method](./behavioral/template-method/)                 | no                      | no       | **yes**    |
-|[visitor](./behavioral/visitor/)                                 | no                      | **yes**  | **yes**    |
+|    Name                                                         |      scala features      |functional|Gang of four|
+|-----------------------------------------------------------------|--------------------------|----------|------------|
+|[chain of responsibility](./behavioral/chain-of-responsibility/) | **yes**(partial function)| **yes**  | **yes**    |
+|[command](./behavioral/command/)                                 | no                       | **yes**  | **yes**    |
+|[loan](./behavioral/loan/)                                       | **yes**(structural type) | **yes**  | no         |
+|[mediator](./behavioral/mediator/)                               | no                       | no       | **yes**    |
+|[memento](./behavioral/memento/)                                 | no                       | no       | **yes**    |
+|[observer](./behavioral/observer/)                               | no                       | no       | **yes**    |
+|[state](./behavioral/state/)                                     | no                       | no       | **yes**    |
+|[strategy](./behavioral/strategy/)                               | no                       | **yes**  | **yes**    |
+|[template method](./behavioral/template-method/)                 | no                       | no       | **yes**    |
+|[visitor](./behavioral/visitor/)                                 | no                       | **yes**  | **yes**    |
 
 
 ### Other
