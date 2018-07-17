@@ -1,7 +1,13 @@
 package com.gx.memento
 
+import java.io.ByteArrayOutputStream
+
+import org.scalatest.{FlatSpec, Matchers}
+
+import scala.collection.mutable
+
 /**
-  * Copyright 2017 josephguan
+  * Copyright 2018 josephguan
   *
   * Licensed under the Apache License, Version 2.0 (the "License");
   * you may not use this file except in compliance with the License.
@@ -16,27 +22,20 @@ package com.gx.memento
   * limitations under the License.
   *
   */
-class Notebook {
-  private var content = new StringBuffer()
+class MementoSpec extends FlatSpec with Matchers {
 
-  def getMemento: NotebookMemento = {
-    NotebookMementoInternal(content.toString)
+  it should "undo the last typing" in  {
+    val notebook = new Notebook
+    notebook.write("Hello World!")
+
+    val memento = notebook.getMemento
+    notebook.write("I want to undo these words...")
+    notebook.setMemento(memento)
+
+    val buffer = new ByteArrayOutputStream()
+    Console.withOut(buffer) {
+      notebook.show()
+    }
+    buffer.toString() should be ("Hello World!\r\n")
   }
-
-  def setMemento(memento: NotebookMemento): Unit = memento match {
-    case NotebookMementoInternal(state) => content = new StringBuffer(state)
-    case _ => throw new IllegalArgumentException()
-  }
-
-  def write(words: String): Unit = {
-    content.append(words)
-  }
-
-  def show(): Unit = {
-    println(content)
-  }
-
-  private case class NotebookMementoInternal(content: String) extends NotebookMemento
-
-
 }
