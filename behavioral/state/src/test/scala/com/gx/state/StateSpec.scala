@@ -1,4 +1,4 @@
-package com.gx.observer
+package com.gx.state
 
 import java.io.ByteArrayOutputStream
 
@@ -20,21 +20,21 @@ import org.scalatest.{FlatSpec, Matchers}
   * limitations under the License.
   *
   */
-class ObserverSpec extends FlatSpec with Matchers {
+class StateSpec extends FlatSpec with Matchers {
 
-  it should "do something while sunny" in {
-    val weather = new Weather()
-    weather.addObserver(new Boy)
-    weather.addObserver(new Girl)
+  it should "output characters according to state" in {
+    val keyboard = new Keyboard()
 
     val buffer = new ByteArrayOutputStream()
     Console.withOut(buffer) {
-      weather.changing(WeatherType.SUNNY)
+      keyboard.pressCapsLock()
+      keyboard.write("hello world")
+      keyboard.pressCapsLock()
+      keyboard.write("hello world")
     }
 
-    val lines = buffer.toString().split("\r\n").toList
-    lines.head should be ("It is sunny. I can go to play football.")
-    lines.last should be ("It is sunny. I can go shopping.")
-
+    val lines = buffer.toString.split("\r\n")
+    lines.head should be ("HELLO WORLD")
+    lines.last should be ("hello world")
   }
 }
