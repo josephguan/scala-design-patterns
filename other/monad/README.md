@@ -33,7 +33,7 @@ Participants in this example:
 
 
 ## Scala Tips
-* In scala, Option/Try/Either/List are all implements of monad pattern.
+* In scala, Option/Try/Either/List are all implementations of monad pattern.
 
 
 ## Reference
