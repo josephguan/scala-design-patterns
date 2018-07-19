@@ -1,7 +1,7 @@
 package com.gx.visitor.fp
 
 /**
-  * Copyright 2017 josephguan
+  * Copyright 2018 josephguan
   *
   * Licensed under the Apache License, Version 2.0 (the "License");
   * you may not use this file except in compliance with the License.
@@ -16,8 +16,16 @@ package com.gx.visitor.fp
   * limitations under the License.
   *
   */
-object App extends App {
-  val zoo = new Zoo(new Monkey, new Lion, new Dolphin)
-  zoo.accept(AnimalOperation.speak)
-  zoo.accept(AnimalOperation.swim)
+object AnimalOperation {
+  def speak(animal: Animal): Unit = animal match {
+    case monkey: Monkey => println("Ooh oo aa aa!")
+    case lion: Lion => println("Roaaar!")
+    case dolphin: Dolphin => println("Tuut tuttu tuutt!")
+    case _ => // do nothing
+  }
+
+  def swim(animal: Animal): Unit = animal match {
+    case dolphin: Dolphin => println("Dolphin swim fast!")
+    case _ => // do nothing
+  }
 }
