@@ -48,7 +48,7 @@ adding new features to these animals, such as speak/swim, without changing these
 
 Participants in this example:
 * AnimalOperation is the **Visitor**.
-* Speak/Swim is the **ConcreteElement**.
+* Speak/Swim is the **ConcreteVisitor**.
 * Animal is the **Element**.
 * Dolphin/Lion/Monkey is the **ConcreteElement**.
 * Zoo is the **ObjectStructure**.
