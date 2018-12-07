@@ -14,6 +14,7 @@ Design patterns are categorized into:
 2. [Structural](#structural)
 3. [Behavioral](#behavioral)
 4. [Other](#other)
+5. [Persistence](#persistence)
 
 For each design pattern, it tags:
 1. **scala features** indicates if the implementation uses scala language-specific features.
@@ -73,6 +74,13 @@ For each design pattern, it tags:
 |----------------------------------------------------|-----------------------------|----------|------------|
 |[selfless trait](./other/selfless-trait/)           | **yes**(companion trait)    | no       | no         |
 |[monad](./other/monad/)                             | no                          | **yes**  | no         |
+
+
+### Persistence
+
+|    Name                                                |      scala features     |functional|Gang of four|
+|--------------------------------------------------------|-------------------------|----------|------------|
+|[data access object](./persistence/data-access-object/) | no                      | no       | no         |
 
 
 
