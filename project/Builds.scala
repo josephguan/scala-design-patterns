@@ -170,6 +170,16 @@ object Builds extends Build {
     settings(libraryDependencies ++= Dependencies.testDependencies)
   modules += `monad`
 
+
+  //----------------------------
+  // persistence patterns
+  //----------------------------
+  lazy val `data-access-object` = project.in(file("persistence/data-access-object")).settings(name := "data-access-object").
+    settings(Common.settings: _*).
+    settings(libraryDependencies ++= Dependencies.testDependencies)
+  modules += `data-access-object`
+
+
   //----------------------------------------
   // all in one
   //----------------------------------------
