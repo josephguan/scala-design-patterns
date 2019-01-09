@@ -179,6 +179,10 @@ object Builds extends Build {
     settings(libraryDependencies ++= Dependencies.testDependencies)
   modules += `data-access-object`
 
+  lazy val `repository` = project.in(file("persistence/repository")).settings(name := "repository").
+    settings(Common.settings: _*).
+    settings(libraryDependencies ++= Dependencies.testDependencies)
+  modules += `repository`
 
   //----------------------------------------
   // all in one

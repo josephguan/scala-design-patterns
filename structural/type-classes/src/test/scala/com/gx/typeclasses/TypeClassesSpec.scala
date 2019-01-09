@@ -20,7 +20,7 @@ import org.scalatest.{FlatSpec, Matchers}
   */
 class TypeClassesSpec extends FlatSpec with Matchers {
 
-  it should "" in {
+  it should "say hello" in {
     val human = new Human()
 
     implicit val SpeakableInt = new Speakable[Int] {

@@ -26,62 +26,62 @@ For each design pattern, it tags:
 
 |     Name                                             |      scala features        |functional|Gang of four|
 |------------------------------------------------------|----------------------------|----------|------------|
-|[abstract factory](./creational/abstract-factory/)    | no                         | no       | **yes**    |
-|[builder](./creational/builder/)                      | no                         | no       | **yes**    |
-|[cake](./creational/cake/)                            | **yes**(trait mix-in)      | no       | no         |
-|[factory kit](./creational/factory-kit/)              | no                         | **yes**  | no         |
-|[factory method](./creational/factory-method/)        | no                         | no       | **yes**    |
-|[prototype](./creational/prototype/)                  | no                         | no       | **yes**    |
-|[simple factory](./creational/simple-factory/)        | **yes**(companion object)  | no       | no         |
-|[singleton](./creational/singleton/)                  | **yes**(object)            | no       | **yes**    |
-|[value object](./creational/value-object/)            | **yes**(case class)        | no       | no         |
+|[abstract factory](./creational/abstract-factory/)    | no                         | no       | yes        |
+|[builder](./creational/builder/)                      | no                         | no       | yes        |
+|[cake](./creational/cake/)                            | **yes**(trait mix-in)      | no       | **no**     |
+|[factory kit](./creational/factory-kit/)              | no                         | **yes**  | **no**     |
+|[factory method](./creational/factory-method/)        | no                         | no       | yes        |
+|[prototype](./creational/prototype/)                  | no                         | no       | yes        |
+|[simple factory](./creational/simple-factory/)        | **yes**(companion object)  | no       | **no**     |
+|[singleton](./creational/singleton/)                  | **yes**(object)            | no       | yes        |
+|[value object](./creational/value-object/)            | **yes**(case class)        | no       | **no**     |
 
 
 ### Structural
 
 |    Name                                              |      scala features         |functional|Gang of four|
 |------------------------------------------------------|-----------------------------|----------|------------|
-|[adapter](./structural/adapter/)                      | **yes**(implicit class)     | no       | **yes**    |
-|[bridge](./structural/bridge/)                        | no                          | no       | **yes**    |
-|[composite](./structural/composite/)                  | no                          | no       | **yes**    |
-|[decorator](./structural/decorator/)                  | **yes**(stackable trait)    | no       | **yes**    |
-|[facade](./structural/facade/)                        | no                          | no       | **yes**    |
-|[flyweight](./structural/flyweight/)                  | no                          | no       | **yes**    |
-|[magnet](./structural/magnet/)                        | **yes**(implicit conversion)| no       | no         |
-|[proxy](./structural/proxy/)                          | no                          | no       | **yes**    |
-|[type classes](./structural/type-classes/)            | **yes**(impilict parameter) | no       | no         |
+|[adapter](./structural/adapter/)                      | **yes**(implicit class)     | no       | yes        |
+|[bridge](./structural/bridge/)                        | no                          | no       | yes        |
+|[composite](./structural/composite/)                  | no                          | no       | yes        |
+|[decorator](./structural/decorator/)                  | **yes**(stackable trait)    | no       | yes        |
+|[facade](./structural/facade/)                        | no                          | no       | yes        |
+|[flyweight](./structural/flyweight/)                  | no                          | no       | yes        |
+|[magnet](./structural/magnet/)                        | **yes**(implicit conversion)| no       | **no**     |
+|[proxy](./structural/proxy/)                          | no                          | no       | yes        |
+|[type classes](./structural/type-classes/)            | **yes**(impilict parameter) | no       | **no**     |
 
 
 ### Behavioral
 
 |    Name                                                         |      scala features      |functional|Gang of four|
 |-----------------------------------------------------------------|--------------------------|----------|------------|
-|[chain of responsibility](./behavioral/chain-of-responsibility/) | **yes**(partial function)| **yes**  | **yes**    |
-|[command](./behavioral/command/)                                 | no                       | **yes**  | **yes**    |
-|[loan](./behavioral/loan/)                                       | **yes**(structural type) | **yes**  | no         |
-|[mediator](./behavioral/mediator/)                               | no                       | no       | **yes**    |
-|[memento](./behavioral/memento/)                                 | no                       | no       | **yes**    |
-|[observer](./behavioral/observer/)                               | no                       | no       | **yes**    |
-|[state](./behavioral/state/)                                     | no                       | no       | **yes**    |
-|[strategy](./behavioral/strategy/)                               | no                       | **yes**  | **yes**    |
-|[template method](./behavioral/template-method/)                 | no                       | no       | **yes**    |
-|[visitor](./behavioral/visitor/)                                 | no                       | **yes**  | **yes**    |
+|[chain of responsibility](./behavioral/chain-of-responsibility/) | **yes**(partial function)| **yes**  | yes        |
+|[command](./behavioral/command/)                                 | no                       | **yes**  | yes        |
+|[loan](./behavioral/loan/)                                       | **yes**(structural type) | **yes**  | **no**     |
+|[mediator](./behavioral/mediator/)                               | no                       | no       | yes        |
+|[memento](./behavioral/memento/)                                 | no                       | no       | yes        |
+|[observer](./behavioral/observer/)                               | no                       | no       | yes        |
+|[state](./behavioral/state/)                                     | no                       | no       | yes        |
+|[strategy](./behavioral/strategy/)                               | no                       | **yes**  | yes        |
+|[template method](./behavioral/template-method/)                 | no                       | no       | yes        |
+|[visitor](./behavioral/visitor/)                                 | no                       | **yes**  | yes        |
 
 
 ### Other
 
 |    Name                                            |      scala features         |functional|Gang of four|
 |----------------------------------------------------|-----------------------------|----------|------------|
-|[selfless trait](./other/selfless-trait/)           | **yes**(companion trait)    | no       | no         |
-|[monad](./other/monad/)                             | no                          | **yes**  | no         |
+|[selfless trait](./other/selfless-trait/)           | **yes**(companion trait)    | no       | **no**     |
+|[monad](./other/monad/)                             | no                          | **yes**  | **no**     |
 
 
 ### Persistence
 
 |    Name                                                |      scala features     |functional|Gang of four|
 |--------------------------------------------------------|-------------------------|----------|------------|
-|[data access object](./persistence/data-access-object/) | no                      | no       | no         |
-
+|[data access object](./persistence/data-access-object/) | no                      | no       | **no**     |
+|[repository](./persistence/repository/)                 | no                      | no       | **no**     |
 
 
 ## Getting Started
